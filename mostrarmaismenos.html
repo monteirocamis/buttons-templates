@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+    <style>
+        .copy-elementor-btn{
+            color: var( --e-global-color-primary );
+            font-family: var( --e-global-typography-text-font-family ), Sans-serif;
+            font-size: var( --e-global-typography-text-font-size );
+            background-color: white;
+            font-style: italic;
+            font-weight: 600;
+            font-style: italic;
+            padding: 10px 0;
+        }
+        .copy-elementor-btn:hover {
+            background-color: white;
+            color: var( --e-global-color-secondary );
+        }
+        
+       .copy-elementor-txt{
+            text-align: left;
+            color: var( --e-global-color-text );
+            font-family: var( --e-global-typography-primary-font-family ), Sans-serif;
+            font-size: var( --e-global-typography-primary-font-size );
+            font-weight: var( --e-global-typography-primary-font-weight );
+            text-transform: var( --e-global-typography-primary-text-transform );
+            font-style: var( --e-global-typography-primary-font-style );
+            line-height: var( --e-global-typography-primary-line-height );
+            letter-spacing: var( --e-global-typography-primary-letter-spacing );
+            word-spacing: var( --e-global-typography-primary-word-spacing );
+        }
+    </style>
+    
+    </head>
+    
+    <body>
+    
+        <p id="texto-depoimento-2" class="copy-elementor-txt">
+            Avaliação positiva: Atendimento, Profissionalismo, Qualidade, Valor Trata-se da melhor corretora 
+            de seguros da região. Atendimento personalizado, rápido e top. Os proprietários Marcio e Raquel 
+            são extremamente competentes e gentis com os clientes, além da eficiência nos serviços prestados. 
+            Não troco por nenhuma outra corretora, pois tem vários serviços de seguros, convênios médicos, 
+            consórcios de diversas categorias, enfim, serviço completo para os clientes e ótimo custo benefício. 
+            Super Indico os profissionais dessa corretora sensacional.
+        </p>
+        <button id="ver-mais2" class="copy-elementor-btn " onclick="Mostrar2()">VER MAIS +</button>
+    
+    
+    <script type="text/javascript">
+    
+    $(document).ready(function(){
+        txt2 = document.getElementById('texto-depoimento-2').innerHTML;
+        txtTemp2 = txt2.substr(0,100)+'...';
+        document.getElementById('texto-depoimento-2').innerHTML = txtTemp2;
+     
+       if(txt2<txtTemp2 ){
+         document.getElementById('texto-depoimento-2').innerHTML = txt2;
+         document.getElementById('ver-mais2').innerHTML = 'VER MENOS -'; 
+       }else{
+          document.getElementById('texto-depoimento-2').innerHTML = txtTemp2;
+          document.getElementById('ver-mais2').innerHTML = 'VER MAIS +'; 
+       }
+     });
+         
+     function Mostrar2(){
+     
+        if(document.getElementById('ver-mais2').innerHTML == 'VER MAIS +'){
+          document.getElementById('texto-depoimento-2').innerHTML = txt2;
+          document.getElementById('ver-mais2').innerHTML = 'VER MENOS -'; 
+        }else{
+          document.getElementById('texto-depoimento-2').innerHTML = txtTemp2;
+          document.getElementById('ver-mais2').innerHTML = 'VER MAIS +'; 
+        }
+     
+     }
+    </script>
+    </body>
+    </html>
